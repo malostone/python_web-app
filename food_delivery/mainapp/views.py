@@ -3,15 +3,15 @@ import random
 
 
 def get_random_restoran():
-    restorans = Restorans.objects.all()
+    restorans = ProductCompany.objects.all()
 
     return random.sample(list(restorans), 1)[0]
 
 
 def get_hot_products():
     restoran = get_random_restoran()
-    products = Products.object.filter(restoran=restoran, is_active=True)
-    hot_products = random.sample(list(products), 3)
+    products = Product.object.filter(restoran=restoran, is_active=True)
+    hot_products = random.sample(list(products), 3)[:3]
     return hot_products
 
 
