@@ -27,6 +27,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('', mainapp.main, name='main'),
     path('admin/', admin.site.urls),
+    path('catalog/', mainapp.catalog, name='catalog'),
 ]
 
 if settings.DEBUG:

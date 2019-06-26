@@ -24,3 +24,10 @@ def main(request):
                'products': hot_products,
                }
     return render(request, 'mainapp/index.html', content)
+
+def catalog(request):
+	categories = ProductCategory.objects.all()
+
+	content = {'categories': categories}
+	return render(request, 'mainapp/catalog.html', content)
+	#categories = ProductCategory.objects.get(pk=pk)

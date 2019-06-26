@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{'categories': categories}
+
+{% block content %}
+	<div class="content">
+		<h3>Категории</h3>
+		{% for category in categories %}
+		    <div class="category-list">
+		    	<a href="">
+		    		{{category.name}}
+		    	</a>
+		    </div>
+		{% endfor %}
+	</div>
+{% endblock %}
