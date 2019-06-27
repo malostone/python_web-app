@@ -4,6 +4,11 @@ from django.db import models
 class ProductCompany(models.Model):
     name = models.CharField(verbose_name='наименование компании', max_length=64, unique=True)
     description = models.TextField(verbose_name='описание компании', blank=True)
+    """
+        Нам нужна простая и быстрая фильтрация по категориям, по этому свяжем 
+        категории и компании партнеры - свзяью многие ко многим
+    """
+    categories = models.ManyToManyField('ProductCategory')
 
     def __str__(self):
         return self.name
