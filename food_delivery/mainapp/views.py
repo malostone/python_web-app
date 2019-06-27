@@ -19,9 +19,10 @@ def get_hot_products():
 def main(request):
     title = 'Главная'
     hot_products = get_hot_products()
-
+    categories=ProductCategory.objects.all()
     content = {'title': title,
                'products': hot_products,
+               'categories': categories,
                }
     return render(request, 'mainapp/index.html', content)
 
