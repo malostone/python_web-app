@@ -35,7 +35,6 @@ def catalog(request):
     return render(request, 'mainapp/catalog.html', content)
 
 
-# categories = ProductCategory.objects.get(pk=pk)
 
 class CompanyCatalogView(ListView):
     model = ProductCompany
