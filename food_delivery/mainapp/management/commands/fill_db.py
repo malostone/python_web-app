@@ -19,3 +19,11 @@ class Command(BaseCommand):
         for category in categories:
             new_category = mainapp.ProductCategory(**category)
             new_category.save()
+
+
+        # рестораны
+        companies = load_from_json('companies')
+        mainapp.ProductCompany.objects.all().delete()
+        for company in companies:
+            new_company = mainapp.ProductCompany(**company)
+            new_company.save()
