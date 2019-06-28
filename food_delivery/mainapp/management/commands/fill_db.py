@@ -27,3 +27,10 @@ class Command(BaseCommand):
         for company in companies:
             new_company = mainapp.ProductCompany(**company)
             new_company.save()
+
+        # продукты
+        products = load_from_json('products')
+        mainapp.Products.objects.all().delete()
+        for product in products:
+            new_product = mainapp.Products(**product)
+            new_product.save()

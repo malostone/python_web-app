@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 import random
-from .models import Product, ProductCategory, ProductCompany
+from .models import Products, ProductCategory, ProductCompany
 
 
 def get_random_restoran():
@@ -12,7 +12,7 @@ def get_random_restoran():
 
 def get_hot_products():
     restoran = get_random_restoran()
-    products = Product.objects.filter(company__name=restoran.name)
+    products = Products.objects.filter(company__name=restoran.name)
     hot_products = random.sample(list(products), 3)[:2]
     return hot_products
 
@@ -26,14 +26,6 @@ def main(request):
                'categories': categories,
                }
     return render(request, 'mainapp/index.html', content)
-
-
-def catalog(request):
-    categories = ProductCategory.objects.all()
-
-    content = {'categories': categories}
-    return render(request, 'mainapp/catalog.html', content)
-
 
 
 class CompanyCatalogView(ListView):
