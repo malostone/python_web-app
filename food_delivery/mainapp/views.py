@@ -38,11 +38,10 @@ def catalog(request):
 # categories = ProductCategory.objects.get(pk=pk)
 
 class CompanyCatalogView(ListView):
-    model = ProductCategory
-    # extra_context = ProductCategory.objects.all()
+    model = ProductCompany
     template_name = 'mainapp/catalog.html'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        print(context)
+        context['categories'] = ProductCategory.objects.all()
         return context
