@@ -4,6 +4,7 @@ from django.db import models
 class ProductCompany(models.Model):
     name = models.CharField(verbose_name='наименование компании', max_length=64, unique=True)
     description = models.TextField(verbose_name='описание компании', blank=True)
+    image = models.ImageField(upload_to='company_images')
 
     def __str__(self):
         return self.name

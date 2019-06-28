@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
 import random
 from .models import Product, ProductCategory, ProductCompany
 
@@ -19,16 +20,28 @@ def get_hot_products():
 def main(request):
     title = 'Главная'
     hot_products = get_hot_products()
-    categories=ProductCategory.objects.all()
+    categories = ProductCategory.objects.all()
     content = {'title': title,
                'products': hot_products,
                'categories': categories,
                }
     return render(request, 'mainapp/index.html', content)
 
-def catalog(request):
-	categories = ProductCategory.objects.all()
 
-	content = {'categories': categories}
-	return render(request, 'mainapp/catalog.html', content)
-	#categories = ProductCategory.objects.get(pk=pk)
+def catalog(request):
+    categories = ProductCategory.objects.all()
+
+    content = {'categories': categories}
+    return render(request, 'mainapp/catalog.html', content)
+
+
+# categories = ProductCategory.objects.get(pk=pk)
+
+class CompanyCatalogView(ListView):
+    model = ProductCompany
+    template_name = 'mainapp/catalog.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = ProductCategory.objects.all()
+        return context
