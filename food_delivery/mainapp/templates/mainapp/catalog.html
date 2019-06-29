@@ -33,7 +33,7 @@
                                 <ul class=" list-unstyled">
                                     {% for category in categories %}
                                         <li>
-                                            <a href="{% url 'catalog' %}">
+                                            <a href="{% url 'restoran_of_category' category.pk %}">
                                                 <span class="title">{{ category.name }}</span>
                                                 <span class="count">&nbsp;8626</span>
                                             </a>

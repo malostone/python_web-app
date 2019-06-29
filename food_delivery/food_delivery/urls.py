@@ -28,6 +28,7 @@ urlpatterns = [
     path('', mainapp.main, name='main'),
     path('catalog/', mainapp.CompanyCatalogView.as_view(), name='catalog'),
     path('admin/', admin.site.urls),
+    path('category/<int:pk>', mainapp.restoran_of_category, name='restoran_of_category'),
 ]
 
 if settings.DEBUG:
