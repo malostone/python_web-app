@@ -6,11 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Food Hub</title>
+    <title>
+        {% block title %}
+        {{ title|title }}
+        {% endblock %}
+    </title>
     <!-- Bootstrap core CSS -->
     <link href="{% static 'assets/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style_1.css' %}" rel="stylesheet">
 
     <!-- styles needed for carousel slider -->
     <link href="{% static 'assets/plugins/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
@@ -22,9 +27,9 @@
     <!-- Just for debugging purposes. -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-   <![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
     <!-- include pace script for automatic web page progress bar  -->
     <script>
@@ -45,67 +50,72 @@
              role="navigation">
             <div class="container">
 
-            <div class="navbar-identity">
+                <div class="navbar-identity">
 
 
-    			<a href="#" class="navbar-brand logo logo-title">
+                    <a href="#" class="navbar-brand logo logo-title">
     			<span class="logo-icon"><i class="icon icon-search-1 ln-shadow-logo "></i>
     			</span>BOOT<span>CLASSIFIED </span> </a>
 
 
-            </div>
+                </div>
 
 
-    			<div class="navbar-collapse collapse">
-    				<ul class="nav navbar-nav ml-auto navbar-right">
-    					<li class="nav-item"><a href="#" class="nav-link"><i class="icon-th-thumb"></i> All Ads</a>
-    					</li>
-    					<li class="dropdown no-arrow nav-item"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav ml-auto navbar-right">
+                        <li class="nav-item"><a href="{% url 'main' %}" class="nav-link"><i class="icon-th-thumb"></i>
+                            Главная</a>
+                        </li>
+                        <li class="dropdown no-arrow nav-item"><a href="#" class="dropdown-toggle nav-link"
+                                                                  data-toggle="dropdown">
 
-    						<span>Jhon Doe</span> <i class="icon-user fa"></i> <i class=" icon-down-open-big fa"></i></a>
-    						<ul
-    								class="dropdown-menu user-menu dropdown-menu-right">
-    							<li class="active dropdown-item"><a href="#"><i class="icon-home"></i> Personal Home
+                            <span>Jhon Doe</span> <i class="icon-user fa"></i> <i
+                                class=" icon-down-open-big fa"></i></a>
+                            <ul
+                                    class="dropdown-menu user-menu dropdown-menu-right">
+                                <li class="active dropdown-item"><a href="#"><i class="icon-home"></i> Personal Home
 
-    							</a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class="icon-th-thumb"></i> My ads </a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class="icon-heart"></i> Favourite ads </a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class="icon-star-circled"></i> Saved search
+                                </a>
+                                </li>
+                                <li class="dropdown-item"><a href="{% url 'catalog' %}"><i class="icon-th-thumb"></i>
+                                    Каталог </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class="icon-heart"></i> Favourite ads </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class="icon-star-circled"></i> Saved search
 
-    							</a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class="icon-folder-close"></i> Archived ads
+                                </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class="icon-folder-close"></i> Archived ads
 
-    							</a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class="icon-hourglass"></i> Pending
+                                </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class="icon-hourglass"></i> Pending
 
-    								approval </a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class=" icon-money "></i> Payment history </a>
-    							</li>
-    							<li class="dropdown-item"><a href="#"><i class=" icon-logout "></i> Log out </a>
-    							</li>
-    						</ul>
-    					</li>
-    					<li class="postadd nav-item"><a class="btn btn-block   btn-border btn-post btn-danger nav-link" href="#">Post Free Add</a>
-    					</li>
-    				</ul>
-    			</div>
+                                    approval </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class=" icon-money "></i> Payment history </a>
+                                </li>
+                                <li class="dropdown-item"><a href="#"><i class=" icon-logout "></i> Log out </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="postadd nav-item"><a class="btn btn-block   btn-border btn-post btn-danger nav-link"
+                                                        href="#">Post Free Add</a>
+                        </li>
+                    </ul>
+                </div>
                 <!--/.nav-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
     </div>
     <!-- /.header -->
+    <div class="content_main">
+        {% block content %}
 
-    {% block content %}
-
-    {% endblock %}
-
+        {% endblock %}
+    </div>
     <footer class="main-footer">
         <div class="footer-content">
             <div class="container">
@@ -250,7 +260,11 @@
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{% static 'assets/js/jquery/jquery-3.3.1.min.js' %}">\x3C/script>')</script>
+<script>window.jQuery || document.write('<script src="{% static '
+assets / js / jquery / jquery - 3.3
+.1.min.js
+' %}">\x3C/script>'
+)</script>
 
 <script src="{% static 'assets/js/vendors.min.js' %}"></script>
 
