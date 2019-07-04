@@ -10,23 +10,21 @@
 
         <div class="hot_products_is">
             {% for restoran in restorans %}
-            <a class="link_product_image_index" href="#">
+            <a class="link_product_image_index" href="{% url 'products_restoran' restoran.pk %}">
                 <div class="restoran_of_category">
 
-                    <img class="restoran_image" src="/media/{{ restoran.image }}" alt="{{product.short_desc}}"
+                    <img class="restoran_image" src="/media/{{ restoran.image }}"
                          style="width: 248px; height: 248px">
                     {{restoran.name}}
 
                 </div>
             </a>
+            {% endfor %}
         </div>
 
-        {% endfor %}
+
     </div>
-
-
 </div>
-
 
 
 {% endblock %}
