@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<int:pk>', mainapp.restoran_of_category, name='restoran_of_category'),
     path('basket/', include('basketapp.urls', namespace='basket')),
+    path('restoran/<int:pk>', mainapp.products_restoran, name='products_restoran')
 ]
 
 if settings.DEBUG:

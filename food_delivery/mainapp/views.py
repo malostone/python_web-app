@@ -3,6 +3,7 @@ from django.views.generic.list import ListView
 import random
 from .models import Products, ProductCategory, ProductCompany
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse, HttpRequest
 
 
 def get_random_restoran():
@@ -58,6 +59,7 @@ def restoran_of_category(request, pk=None):
                 else:
                     restorans.append(ProductCompany.objects.get(name=product.company))
     title = 'Рестораны с категорией {}'.format(category.name)
+
     content = {
         'title': title,
         'category': category,
@@ -66,3 +68,24 @@ def restoran_of_category(request, pk=None):
     }
 
     return render(request, 'mainapp/restorans_list.html', content)
+
+
+def products_restoran(request, pk=None):
+    if pk != None and pk != 0:
+        restoran = get_object_or_404(ProductCompany, pk=pk)
+        # print(restoran.name)
+        products = Products.objects.filter(company__name=restoran.name)
+
+
+        title = 'Продукты ресторана: {}'.format(restoran.name)
+
+        content = {
+            'title': title,
+            'restoran': restoran,
+            'products': products,
+
+            }
+
+        return render(request, 'mainapp/products_restoran.html', content)
+    else:
+        return
