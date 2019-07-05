@@ -26,11 +26,11 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('', mainapp.main, name='main'),
-    path('catalog/', mainapp.CompanyCatalogView.as_view(), name='catalog'),
+    # path('catalog/', mainapp.CompanyCatalogView.as_view(), name='catalog'),
     path('admin/', admin.site.urls),
-    path('category/<int:pk>', mainapp.restoran_of_category, name='restoran_of_category'),
+    # path('category/<int:pk>', mainapp.restoran_of_category, name='restoran_of_category'),
     path('basket/', include('basketapp.urls', namespace='basket')),
-    path('restoran/<int:pk>', mainapp.products_restoran, name='products_restoran')
+    path('products/<int:pk>', mainapp.products, name='products')
 ]
 
 if settings.DEBUG:
