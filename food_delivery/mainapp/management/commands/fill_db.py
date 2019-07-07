@@ -8,7 +8,8 @@ JSON_PATH = 'mainapp/json'
 
 
 def load_from_json(file_name):
-    with open(os.path.join(JSON_PATH, file_name + '.json'), 'r') as infile:
+    with open(os.path.join(JSON_PATH, file_name + '.json'), 'r', encoding='utf-8') as infile:
+
         return json.load(infile)
 
 
@@ -18,14 +19,21 @@ class Command(BaseCommand):
         categories = load_from_json('categories')
         ProductCategory.objects.all().delete()
         for category in categories:
+            # print(category)
             new_category = ProductCategory(**category)
             new_category.save()
 
 
         # продукты
+        # print(type(load_from_json('products1')))
         products = load_from_json('products')
+
         Products.objects.all().delete()
         for product in products:
+            # print(product)
+            category_name = product['category']
+            _category = ProductCategory.objects.get(name=category_name)
+            product['category'] = _category
             new_product = Products(**product)
             new_product.save()
 
