@@ -1,12 +1,17 @@
 {% extends 'mainapp/base.html' %}
 {% load staticfiles %}
-{'title': title, 'restoran': restoran, 'products': products,}
+
 {% block content %}
 
+
 <div class="content">
+
+    {% include 'mainapp/includes/inc_category_menu.html' %}
+
+    <!--<h3 class="">{{category.name|title}}</h3>-->
     <div class="hot_products">
-        <h3 class="h3">Продукты</h3>
-        <h3 class="h3">{{restoran.name}}</h3>
+        <!--<h3 class="h3">Продукты</h3>-->
+
 
         <div class="hot_products_is">
             {% for product in products %}

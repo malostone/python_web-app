@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -77,7 +77,7 @@
 
                                 </a>
                                 </li>
-                                <li class="dropdown-item"><a href="{% url 'catalog' %}"><i class="icon-th-thumb"></i>
+                                <li class="dropdown-item"><a href="#"><i class="icon-th-thumb"></i>
                                     Каталог </a>
                                 </li>
                                 <li class="dropdown-item"><a href="#"><i class="icon-heart"></i> Favourite ads </a>
@@ -101,7 +101,7 @@
                             </ul>
                         </li>
                         <li class="postadd nav-item"><a class="btn btn-block   btn-border btn-post btn-danger nav-link"
-                                                        href="#">Post Free Add</a>
+                                                        href="{% url 'auth:login' %}">Войти</a>
                         </li>
                     </ul>
                 </div>
