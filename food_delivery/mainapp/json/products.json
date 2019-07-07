@@ -1,30 +1,44 @@
 [
-	{
-		"name": "Бургер",
-		"description": "еда"
-	},
-	{
-		"name": "Пицца",
-		"description": "еда"
-	},
-	{
-		"name": "Ролл",
-		"description": "еда"
-	},
-	{
-		"name": "Суши",
-		"description": "еда"
-	},
-	{
-		"name": "Спагетти",
-		"description": "еда"
-	},
-	{
-		"name": "Лазанья",
-		"description": "еда"
-	},
-	{
-		"name": "Котлеты",
-		"description": "еда"
-	}
+    {
+        "id": "1",
+        "category": "Р±СѓСЂРіРµСЂС‹",
+        "name": "Р±СѓСЂРіРµСЂ",
+        "image": "products_images\/burger.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "200"
+    },
+    {
+        "id": "2",
+        "name": "pizza",
+        "image": "products_images\/pizza.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "500",
+        "category": "РїРёС†С†Р°"
+    },
+    {
+        "id": "3",
+        "name": "sushi",
+        "image": "products_images\/sushi.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "200",
+        "category": "СЃСѓС€Рё"
+    },
+    {
+        "id": "4",
+        "name": "spaghetti",
+        "image": "products_images\/spaghetti.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "200",
+        "category": "РёС‚Р°Р»СЊСЏРЅСЃРєР°СЏ РєСѓС…РЅСЏ"
+    }
 ]
+
+
+
+
+
+
