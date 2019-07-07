@@ -30,7 +30,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('category/<int:pk>', mainapp.restoran_of_category, name='restoran_of_category'),
     path('basket/', include('basketapp.urls', namespace='basket')),
-    path('products/<int:pk>', mainapp.products, name='products')
+    path('products/<int:pk>', mainapp.products, name='products'),
+    path('auth/', include('authapp.urls', namespace='auth')),
 ]
 
 if settings.DEBUG:

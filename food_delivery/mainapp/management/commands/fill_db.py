@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
-import mainapp.models as mainapp
-
+from mainapp.models import Products, ProductCategory
+from django.contrib.auth.models import User
+from authapp.models import ShopUser
 import json, os
 
 JSON_PATH = 'mainapp/json'
@@ -15,15 +16,17 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # категории
         categories = load_from_json('categories')
-        mainapp.ProductCategory.objects.all().delete()
+        ProductCategory.objects.all().delete()
         for category in categories:
-            new_category = mainapp.ProductCategory(**category)
+            new_category = ProductCategory(**category)
             new_category.save()
 
 
         # продукты
         products = load_from_json('products')
-        mainapp.Products.objects.all().delete()
+        Products.objects.all().delete()
         for product in products:
-            new_product = mainapp.Products(**product)
+            new_product = Products(**product)
             new_product.save()
+
+        super_user = ShopUser.objects.create_superuser('user', 'test@test.ru', 'user', age=18)
