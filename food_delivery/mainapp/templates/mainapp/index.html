@@ -7,12 +7,18 @@
 <div class="content">
 
     <div class="hot_products">
+        <h3 class="h3">КАТЕГОРИИ ПРОДУКТОВ</h3>
         <div class="hot_products_is">
             {% for category in categories %}
-            <div class="product-index">
-                <img src="/media/{{ category.image }}" alt="{{ product.short_desc }}" class="img-product-index">
-                <a href="{% url 'products' category.pk %}" class="product-index-hover">{{ category.name }}</a>
-            </div>
+
+
+            <a class="link_product_image_index" href="{% url 'products' category.pk %}">
+                <div class="hot_product category_index">
+                    <p class="hot_product_name">{{category.name}}</p>
+                </div>
+            </a>
+
+
             {% endfor %}
         </div>
 
