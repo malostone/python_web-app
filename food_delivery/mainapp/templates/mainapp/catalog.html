@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="content">
+        <div class="restaurants">
+            {% for restaurant in restaurant_list %}
+            <div class="restaurant-item">
+                <a href="{% url 'catalog:products' restaurant.pk %}">{{ restaurant.name }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
