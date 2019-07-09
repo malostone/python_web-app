@@ -16,7 +16,6 @@
 
     <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
     <link href="{% static 'assets/css/style_1.css' %}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <!-- styles needed for carousel slider -->
     <link href="{% static 'assets/plugins/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
@@ -67,10 +66,11 @@
                         <li class="nav-item"><a href="{% url 'main' %}" class="nav-link"><i class="icon-th-thumb"></i>
                             Главная</a>
                         </li>
+                        {% if user.is_authenticated %}
                         <li class="dropdown no-arrow nav-item"><a href="#" class="dropdown-toggle nav-link"
                                                                   data-toggle="dropdown">
 
-                            <span>Jhon Doe</span> <i class="icon-user fa"></i> <i
+                            <span>{{user.first_name|default:'Пользователь'}}</span> <i class="icon-user fa"></i> <i
                                 class=" icon-down-open-big fa"></i></a>
                             <ul
                                     class="dropdown-menu user-menu dropdown-menu-right">
@@ -81,7 +81,7 @@
                                 <li class="dropdown-item"><a href="#"><i class="icon-th-thumb"></i>
                                     Каталог </a>
                                 </li>
-                                <li class="dropdown-item"><a href="#"><i class="icon-heart"></i> Favourite ads </a>
+                                <li class="dropdown-item"><a href="{% url 'basket:view' %}"><i class="icon-heart"></i> Корзина </a>
                                 </li>
                                 <li class="dropdown-item"><a href="#"><i class="icon-star-circled"></i> Saved search
 
@@ -101,8 +101,17 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="postadd nav-item"><a class="btn btn-block   btn-border btn-post btn-danger nav-link"
-                                                        href="{% url 'auth:login' %}">Войти</a>
+                        {% endif%}
+
+
+                        <li class="postadd nav-item">
+                            {% if user.is_authenticated %}
+                            <a class="btn btn-block   btn-border btn-post btn-danger nav-link"
+                               href="{% url 'auth:logout' %}">Выйти</a>
+                            {% else %}
+                            <a class="btn btn-block   btn-border btn-post btn-danger nav-link"
+                               href="{% url 'auth:login' %}">Войти</a>
+                            {% endif %}
                         </li>
                     </ul>
                 </div>

@@ -15,7 +15,7 @@
 
         <div class="hot_products_is">
             {% for product in products %}
-            <a class="link_product_image_index" href="#">
+            <a class="link_product_image_index" href="{% url 'basket:add' product.pk %}">
                 <div class="restoran_of_category">
 
                     <img class="restoran_image" src="/media/{{ product.image }}"
