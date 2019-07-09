@@ -1,37 +1,31 @@
 [
     {
-        "id": "1",
-        "name": "РїРёС†С†Р°",
+        "name": "пицца",
         "image": "",
         "description": "pull"
     },
     {
-        "id": "2",
-        "name": "СЃСѓС€Рё",
+        "name": "суши",
         "image": "",
         "description": "pull"
     },
     {
-        "id": "3",
-        "name": "Р±СѓСЂРіРµСЂС‹",
+        "name": "бургеры",
         "image": "",
         "description": "pull"
     },
     {
-        "id": "4",
-        "name": "РІРѕРє",
+        "name": "вок",
         "image": "",
         "description": "pull"
     },
     {
-        "id": "5",
-        "name": "РёС‚Р°Р»СЊСЏРЅСЃРєР°СЏ РєСѓС…РЅСЏ",
+        "name": "итальянская кухня",
         "image": "",
         "description": "pull"
     },
     {
-        "id": "6",
-        "name": "СЂСѓСЃСЃРєР°СЏ РєСѓС…РЅСЏ",
+        "name": "русская кухня",
         "image": "",
         "description": "pull"
     }

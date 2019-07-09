@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 import random
-from .models import Products, ProductCategory
+from .models import Products, ProductCategory, Restaurant
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, HttpRequest
 
@@ -15,44 +15,20 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 
-# class CompanyCatalogView(ListView):
-#     model = ProductCompany
-#     template_name = 'mainapp/catalog.html'
-#
-#     def get_context_data(self, *, object_list=None, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['categories'] = ProductCategory.objects.all()
-#         return context
+def restaurants(request, pk=None):
+    if pk == 0:
+        restaurant_list = Restaurant.objects.all()
+        title = "Все рестораны"
+    else:
+        category = get_object_or_404(ProductCategory, pk=pk)
+        restaurant_list = Restaurant.objects.filter(category__pk=pk)
+        title = f'Рестораны, доставляющие {category.name}'
 
-
-# def restoran_of_category(request, pk=None):
-#     # links_menu = ProductCategory.objects.filter(is_active=True)
-#
-#     # basket = get_basket(request.user)
-#
-#     if pk != None:
-#         if pk == 0:
-#             restorans = ProductCompany.objects.all()
-#             category = {'name': 'все', 'pk': 0}
-#         else:
-#             category = get_object_or_404(ProductCategory, pk=int(pk))
-#             products = Products.objects.filter(category__pk=int(pk))
-#             restorans = []
-#             for product in products:
-#                 if ProductCompany.objects.get(name=product.company) in restorans:
-#                     continue
-#                 else:
-#                     restorans.append(ProductCompany.objects.get(name=product.company))
-#     title = 'Рестораны с категорией {}'.format(category.name)
-#
-#     content = {
-#         'title': title,
-#         'category': category,
-#         'restorans': restorans,
-#
-#     }
-#
-#     return render(request, 'mainapp/restorans_list.html', content)
+    content = {
+        'title': title,
+        'restaurant_list': restaurant_list,
+    }
+    return render(request, 'mainapp/catalog.html', content)
 
 
 def products(request, pk=None):
@@ -64,9 +40,9 @@ def products(request, pk=None):
         title = "Все продукты"
     else:
         category = get_object_or_404(ProductCategory, pk=pk)
-        products = Products.objects.filter(category__pk=pk)
+        products = Products.objects.filter(restaurant__pk=pk)
 
-        title = 'Продукты категории: {}'.format(category.name)
+        title = f'Продукты ресторана: {category.name}'
 
     content = {
         'title': title,
