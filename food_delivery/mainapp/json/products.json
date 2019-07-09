@@ -1,39 +1,57 @@
 [
     {
-        "id": "1",
-        "category": "Р±СѓСЂРіРµСЂС‹",
-        "name": "Р±СѓСЂРіРµСЂ",
+        "category": "бургеры",
+        "restaurant": "Макдональдс",
+        "name": "бургер 1",
         "image": "products_images\/burger.jpg",
         "short_desc": "food",
         "description": "food",
         "price": "200"
     },
     {
-        "id": "2",
-        "name": "pizza",
-        "image": "products_images\/pizza.jpg",
+        "category": "бургеры",
+        "restaurant": "Макдональдс",
+        "name": "бургер 2",
+        "image": "products_images\/burger.jpg",
         "short_desc": "food",
         "description": "food",
-        "price": "500",
-        "category": "РїРёС†С†Р°"
+        "price": "300"
     },
     {
-        "id": "3",
-        "name": "sushi",
-        "image": "products_images\/sushi.jpg",
+        "category": "пицца",
+        "restaurant": "Папа джонс",
+        "name": "Пицца 1",
+        "image": "products_images\/burger.jpg",
         "short_desc": "food",
         "description": "food",
-        "price": "200",
-        "category": "СЃСѓС€Рё"
+        "price": "500"
     },
     {
-        "id": "4",
-        "name": "spaghetti",
-        "image": "products_images\/spaghetti.jpg",
+        "category": "пицца",
+        "restaurant": "Папа джонс",
+        "name": "Пицца 2",
+        "image": "products_images\/burger.jpg",
         "short_desc": "food",
         "description": "food",
-        "price": "200",
-        "category": "РёС‚Р°Р»СЊСЏРЅСЃРєР°СЏ РєСѓС…РЅСЏ"
+        "price": "600"
+    },
+    {
+        "category": "суши",
+        "restaurant": "Планета суши",
+        "name": "ролл 1",
+        "image": "products_images\/burger.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "250"
+    },
+    {
+        "category": "пицца",
+        "restaurant": "Доминос",
+        "name": "пицца",
+        "image": "products_images\/burger.jpg",
+        "short_desc": "food",
+        "description": "food",
+        "price": "700"
     }
 ]
 
