@@ -1,7 +1,8 @@
 .hot_products {
     margin-top: 15px;
-    /*padding-left: 180px;*/
-    /*padding-right: 180px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -9,11 +10,14 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 900px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .hot_product {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     position: relative;
     border: 1px solid #000;
     margin: 5px 5px;
@@ -104,6 +108,38 @@
     color: #6c6c6c;
     font-size: 18px;
     font-weight: 700;
+}
+
+.img-product-index {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.product-index {
+    width: 200px;
+    height: 200px;
+    margin: 5px 5px;
+    display: flex;
+}
+
+.product-index-hover {
+    border: 1px solid #9c9c9c;
+    background-color: #ffffff;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.product-index:hover .product-index-hover {
+    opacity: 0.9;
+    transition: all 0.3s;
 }
 
 .basket_record {
