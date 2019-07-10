@@ -1,38 +1,50 @@
 [
     {
         "id": "1",
-        "name": "РїРёС†С†Р°",
-        "image": "",
+        "name": "Пицца",
+        "image": "category_images/piza.jpg",
         "description": "pull"
     },
     {
         "id": "2",
-        "name": "СЃСѓС€Рё",
-        "image": "",
+        "name": "Суши и роллы",
+        "image": "category_images/sushi.jpg",
         "description": "pull"
     },
     {
         "id": "3",
-        "name": "Р±СѓСЂРіРµСЂС‹",
-        "image": "",
+        "name": "Бургеры",
+        "image": "category_images/burger.jpg",
         "description": "pull"
     },
     {
         "id": "4",
-        "name": "РІРѕРє",
-        "image": "",
+        "name": "Вок",
+        "image": "category_images/wok.jpg",
         "description": "pull"
     },
     {
         "id": "5",
-        "name": "РёС‚Р°Р»СЊСЏРЅСЃРєР°СЏ РєСѓС…РЅСЏ",
-        "image": "",
+        "name": "Италия",
+        "image": "category_images/italy.jpg",
         "description": "pull"
     },
     {
         "id": "6",
-        "name": "СЂСѓСЃСЃРєР°СЏ РєСѓС…РЅСЏ",
-        "image": "",
+        "name": "Россия",
+        "image": "category_images/russia.jpg",
+        "description": "pull"
+    },
+    {
+        "id": "7",
+        "name": "Мексика",
+        "image": "category_images/mexic.jpg",
+        "description": "pull"
+    },
+    {
+        "id": "8",
+        "name": "Франция",
+        "image": "category_images/french.jpg",
         "description": "pull"
     }
 ]

@@ -11,7 +11,7 @@
             {% for category in categories %}
             <div class="product-index">
                 <img src="/media/{{ category.image }}" alt="{{ product.short_desc }}" class="img-product-index">
-                <a href="{% url 'products' category.pk %}" class="product-index-hover">{{ category.name }}</a>
+                <a href="{% url 'catalog:restaurants' category.pk %}" class="product-index-hover">{{ category.name }}</a>
             </div>
             {% endfor %}
         </div>

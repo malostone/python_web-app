@@ -5,7 +5,7 @@
 
 
 <div class="content">
-    <h3>Все продукты ресторана {{restaurant.name}}</h3>
+    <h3>{{title}}</h3>
     {% include 'mainapp/includes/inc_category_menu.html' %}
     <!--<h3 class="">{{category.name|title}}</h3>-->
     <div class="hot_products">
@@ -29,6 +29,7 @@
                          style="width: 248px; height: 248px">
                     {{product.name}}
                 </div>
+
             </a>
             {% endif %}
             {% endfor %}

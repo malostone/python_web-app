@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3c50c3b-aa46-4a71-a938-691c9ef0b194" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/food_delivery/authapp/templates/authapp/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_delivery/authapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/authapp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_delivery/authapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/authapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_delivery/authapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/authapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/food_delivery/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/food_delivery/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/json/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/json/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/json/companies.json" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/json/restaurants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/json/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/json/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/mainapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery/migrate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery/migrate.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <state relative-caret-position="85">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -29,62 +40,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food_delivery/authapp/models.py">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="699">
+              <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/food_delivery/authapp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-              <folding>
-                <element signature="e#1#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/register.html">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food_delivery/authapp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/login.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/restaurants.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authapp/forms.py">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/products.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-340">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/categories.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -111,28 +139,33 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/urls.py" />
         <option value="$PROJECT_DIR$/food_delivery/adminapp/urls.py" />
         <option value="$PROJECT_DIR$/food_delivery/food_delivery/settings.py" />
         <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/restorans_list.html" />
         <option value="$PROJECT_DIR$/food_delivery/basketapp/urls.py" />
         <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products_restoran.html" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/models.py" />
         <option value="$PROJECT_DIR$/food_delivery/basketapp/models.py" />
-        <option value="$PROJECT_DIR$/food_delivery/food_delivery/urls.py" />
         <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/base.html" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py" />
         <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/category_menu.html" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/views.py" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html" />
         <option value="$PROJECT_DIR$/food_delivery/static/assets/css/style_1.css" />
-        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html" />
         <option value="$PROJECT_DIR$/food_delivery/basketapp/views.py" />
         <option value="$PROJECT_DIR$/food_delivery/authapp/forms.py" />
         <option value="$PROJECT_DIR$/food_delivery/authapp/views.py" />
         <option value="$PROJECT_DIR$/food_delivery/authapp/templates/authapp/register.html" />
         <option value="$PROJECT_DIR$/food_delivery/authapp/urls.py" />
+        <option value="$PROJECT_DIR$/food_delivery/migrate.bat" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/urls.py" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/food_delivery/food_delivery/urls.py" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/catalog.html" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/json/categories.json" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/models.py" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/json/restaurants.json" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/json/products.json" />
+        <option value="$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py" />
       </list>
     </option>
   </component>
@@ -147,44 +180,66 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="python_web-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="python_web-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="python_web-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
-              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="python_web-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
-              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="python_web-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="food_delivery" type="462c0819:PsiDirectoryNode" />
-              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="authapp" type="462c0819:PsiDirectoryNode" />
+              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,17 +281,18 @@
       <workItem from="1562251638330" duration="6758000" />
       <workItem from="1562344498416" duration="1402000" />
       <workItem from="1562511221793" duration="748000" />
+      <workItem from="1562662325869" duration="13388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32600000" />
+    <option name="totallyTimeSpent" value="45988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -262,6 +318,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/food_delivery/authapp/views.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/food_delivery/adminapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -279,19 +345,6 @@
     <entry file="file://$PROJECT_DIR$/food_delivery/adminapp/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/migrate.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/food_delivery/adminapp/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -302,7 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/catalog.html" />
     <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/restorans_list.html" />
     <entry file="file://$PROJECT_DIR$/food_delivery/basketapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -332,65 +384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/food_delivery/static/assets/css/style_1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
           <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/food_delivery/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -400,34 +397,6 @@
           <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding>
             <element signature="e#0#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/products.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/categories.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -442,29 +411,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authapp/forms.py">
+    <entry file="file://$PROJECT_DIR$/authapp/forms.py" />
+    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/login.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -473,10 +424,147 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/food_delivery/authapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="187">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
-            <element signature="e#1#58#0" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/authapp/templates/authapp/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/migrate.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/food_delivery/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/catalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/includes/inc_category_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="66" lean-forward="true" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/templates/mainapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/categories.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/products.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/json/restaurants.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Programms/anaconda/Lib/site-packages/notebook/config_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/food_delivery/mainapp/management/commands/fill_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1",
+        "restaurant": "Папа джонс",
+        "category": "Пицца"
+    },
+    {
+        "id": "2",
+        "restaurant": "Папа джонс",
+        "category": "Бургеры"
+    },
+    {
+        "id": "3",
+        "restaurant": "Планета суши",
+        "category": "Суши и роллы"
+
+    },
+    {
+        "id": "4",
+        "restaurant": "Бургер кинг",
+        "category": "Бургеры"
+
+    },
+    {
+        "id": "5",
+        "restaurant": "Воккер",
+        "category": "Вок"
+
+    },
+    {
+        "id": "6",
+        "restaurant": "Макдональдс",
+        "category": "Бургеры"
+
+    },
+    {
+        "id": "7",
+        "restaurant": "Макдональдс",
+        "category": "Пицца"
+
+    },
+    {
+        "id": "8",
+        "restaurant": "Макдональдс",
+        "category": "Вок"
+
+    },
+    {
+        "id": "9",
+        "restaurant": "Доминос",
+        "category": "Пицца"
+
+    }
+]
