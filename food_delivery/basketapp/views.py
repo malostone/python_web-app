@@ -23,10 +23,15 @@ def basket(request):
 @login_required
 def basket_add(request, pk):
     product = get_object_or_404(Products, pk=pk)
-    basket = Basket.objects.filter(user=request.user, product=product).first()
 
+    basket = Basket.objects.filter(user=request.user, product=product).first()
+    basket_user = Basket.objects.filter(user=request.user)
+    restauran = product.restaurant
     if not basket:
-        basket = Basket(user=request.user, product=product)
+        if not basket_user or product.restaurant == basket_user[0].restauran:
+            basket = Basket(user=request.user, product=product, restauran=restauran)
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
     basket.quantity += 1
     basket.save()

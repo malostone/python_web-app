@@ -1,32 +1,50 @@
 [
     {
-        "name": "пицца",
-        "image": "",
+        "id": "1",
+        "name": "Пицца",
+        "image": "category_images/piza.jpg",
         "description": "pull"
     },
     {
-        "name": "суши",
-        "image": "",
+        "id": "2",
+        "name": "Суши и роллы",
+        "image": "category_images/sushi.jpg",
         "description": "pull"
     },
     {
-        "name": "бургеры",
-        "image": "",
+        "id": "3",
+        "name": "Бургеры",
+        "image": "category_images/burger.jpg",
         "description": "pull"
     },
     {
-        "name": "вок",
-        "image": "",
+        "id": "4",
+        "name": "Вок",
+        "image": "category_images/wok.jpg",
         "description": "pull"
     },
     {
-        "name": "итальянская кухня",
-        "image": "",
+        "id": "5",
+        "name": "Италия",
+        "image": "category_images/italy.jpg",
         "description": "pull"
     },
     {
-        "name": "русская кухня",
-        "image": "",
+        "id": "6",
+        "name": "Россия",
+        "image": "category_images/russia.jpg",
+        "description": "pull"
+    },
+    {
+        "id": "7",
+        "name": "Мексика",
+        "image": "category_images/mexic.jpg",
+        "description": "pull"
+    },
+    {
+        "id": "8",
+        "name": "Франция",
+        "image": "category_images/french.jpg",
         "description": "pull"
     }
 ]

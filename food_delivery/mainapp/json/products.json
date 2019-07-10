@@ -1,6 +1,7 @@
 [
     {
-        "category": "бургеры",
+        "id": "1",
+        "category": "Бургеры",
         "restaurant": "Макдональдс",
         "name": "бургер 1",
         "image": "products_images\/burger.jpg",
@@ -9,7 +10,8 @@
         "price": "200"
     },
     {
-        "category": "бургеры",
+        "id": "2",
+        "category": "Бургеры",
         "restaurant": "Макдональдс",
         "name": "бургер 2",
         "image": "products_images\/burger.jpg",
@@ -18,7 +20,8 @@
         "price": "300"
     },
     {
-        "category": "пицца",
+        "id": "3",
+        "category": "Пицца",
         "restaurant": "Папа джонс",
         "name": "Пицца 1",
         "image": "products_images\/burger.jpg",
@@ -27,7 +30,8 @@
         "price": "500"
     },
     {
-        "category": "пицца",
+        "id": "4",
+        "category": "Пицца",
         "restaurant": "Папа джонс",
         "name": "Пицца 2",
         "image": "products_images\/burger.jpg",
@@ -36,7 +40,8 @@
         "price": "600"
     },
     {
-        "category": "суши",
+        "id": "5",
+        "category": "Суши и роллы",
         "restaurant": "Планета суши",
         "name": "ролл 1",
         "image": "products_images\/burger.jpg",
@@ -45,7 +50,8 @@
         "price": "250"
     },
     {
-        "category": "пицца",
+        "id": "6",
+        "category": "Пицца",
         "restaurant": "Доминос",
         "name": "пицца",
         "image": "products_images\/burger.jpg",
