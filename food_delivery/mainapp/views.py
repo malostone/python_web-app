@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 import random
-from .models import Products, ProductCategory, Restaurant
+from .models import Products, ProductCategory, Restaurant, RestaurantCategory
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse, HttpRequest
 
@@ -31,25 +31,43 @@ def restaurants(request, pk=None):
     return render(request, 'mainapp/catalog.html', content)
 
 
-def products(request, pk=None):
-    links_menu = ProductCategory.objects.all()
-
-    if pk == 0:
-        category = {'name': 'все', 'pk': 0}
-        products = Products.objects.all()
-        title = "Все продукты"
-    else:
-        category = get_object_or_404(ProductCategory, pk=pk)
-        products = Products.objects.filter(restaurant__pk=pk)
-
-        title = f'Продукты ресторана: {category.name}'
+def products(request, pk):
+    links_menu = RestaurantCategory.objects.filter(restaurant=pk)
+    restaurant = Restaurant.objects.get(pk=pk)
+    products = Products.objects.filter(restaurant=pk)
+    title = "Все продукты {}".format(restaurant)
+    # else:
+    #     category = get_object_or_404(ProductCategory, pk=pk)
+    #     products = Products.objects.filter(restaurant__pk=pk)
+    #
+    #     title = f'Продукты ресторана: {category.name}'
 
     content = {
         'title': title,
         'links_menu': links_menu,
-        'category': category,
         'products': products,
-        # 'basket': basket,
+        'restaurant': restaurant
     }
 
     return render(request, 'mainapp/products.html', content)
+
+
+def products_list(request, restaurant_pk, category_pk):
+
+    print('Привет', restaurant_pk, category_pk)
+    links_menu = RestaurantCategory.objects.filter(restaurant=restaurant_pk)
+    restaurant = Restaurant.objects.get(pk=restaurant_pk)
+    if category_pk == 0:
+        title = 'Все продукты в ресторане {}'.format(restaurant.name)
+        products = Products.objects.filter(restaurant=restaurant_pk)
+    else:
+        category = ProductCategory.objects.get(pk=category_pk)
+        products = Products.objects.filter(restaurant=restaurant_pk, category=category_pk)
+        title = 'Продукты категории {} в ресторане {}'.format(category.name, restaurant.name)
+    content = {
+        'title': title,
+        'links_menu': links_menu,
+        'products': products,
+        'restaurant': restaurant
+    }
+    return render(request, 'mainapp/products_list.html', content)

@@ -1,11 +1,12 @@
 from django.db import models
 from django.conf import settings
-from mainapp.models import Products
+from mainapp.models import Products, ProductCategory, Restaurant
 
 
 class Basket(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket')
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    restauran = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
     add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
     price = models.DecimalField(verbose_name='Цена', max_digits=20, decimal_places=2, default=0)

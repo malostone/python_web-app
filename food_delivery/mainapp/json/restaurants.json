@@ -1,38 +1,44 @@
 [
   {
+        "id": "1",
         "name": "Папа джонс",
         "image": "",
-        "description": "Ресторан",
-        "category": "пицца"
+        "description": "Ресторан"
+
     },
     {
+        "id": "2",
         "name": "Планета суши",
         "image": "",
-        "description": "Ресторан",
-        "category": "суши"
+        "description": "Ресторан"
+
     },
     {
+        "id": "3",
         "name": "Бургер кинг",
         "image": "",
-        "description": "Ресторан",
-        "category": "бургеры"
+        "description": "Ресторан"
+
     },
     {
+        "id": "4",
         "name": "Воккер",
         "image": "",
-        "description": "Ресторан",
-        "category": "вок"
+        "description": "Ресторан"
+
     },
     {
+        "id": "5",
         "name": "Макдональдс",
         "image": "",
-        "description": "Ресторан",
-        "category": "бургеры"
+        "description": "Ресторан"
+
     },
     {
+        "id": "6",
         "name": "Доминос",
         "image": "",
-        "description": "Ресторан",
-        "category": "пицца"
+        "description": "Ресторан"
+
     }
 ]
