@@ -11,6 +11,7 @@ class Order(models.Model):
     created = models.DateTimeField(verbose_name='Создан', auto_now_add=True)
     updated = models.DateTimeField(verbose_name='Обновлен', auto_now=True)
     paid = models.BooleanField(verbose_name='Оплачен', default=False)
+    is_active = models.BooleanField(verbose_name='active', default=True)
 
     class Meta:
         ordering = ('-created', )
