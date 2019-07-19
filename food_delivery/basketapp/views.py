@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
-from basketapp.models import Basket
+from basketapp.models import Basket, Order, OrderItems
 from mainapp.models import Products
+from basketapp.forms import OrderForm
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.http import JsonResponse
 from django.template.loader import render_to_string
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 
 @login_required
@@ -70,6 +72,7 @@ def basket_edit(request, pk, quantity):
         result = render_to_string('basketapp/includes/inc_basket_list.html', content)
         return JsonResponse({'result': result})
 
+
 @login_required
 def control(request, pk):
     basket = Basket.objects.filter(user=request.user).first()
@@ -93,3 +96,83 @@ def delete_all(request, pk):
 def ret(request):
     product = Basket.objects.filter(user=request.user).first()
     return HttpResponseRedirect(reverse('catalog:products_list', args=[product.restauran.pk, 0]))
+
+
+@login_required
+def editt(request, pk):
+    if str(pk) in request.POST:
+        quantity = request.POST.get(str(pk))
+        # print('Привет', quantity)
+        item = Basket.objects.get(pk=pk)
+        if quantity == 0:
+            item.delete()
+        else:
+            item.quantity = quantity
+            item.save()
+    title = 'Корзина'
+    basket_items = Basket.objects.filter(user=request.user).order_by('product__category')
+
+    content = {
+        'title': title,
+        'basket_items': basket_items,
+    }
+
+    return render(request, 'basketapp/basket.html', content)
+
+
+@login_required
+def order(request):
+    title = 'Оформление заказа'
+    if request.method == 'POST':
+        print('Привет')
+        order_form = OrderForm(request.POST)
+        if order_form.is_valid():
+            order_form.save()
+            return HttpResponseRedirect(reverse('main'))
+    else:
+
+        order_form = OrderForm()
+        user = request.user
+        print(type(order_form))
+    return render(request, 'basketapp/create_order.html', {'title': title, 'order_form': order_form, 'user': user})
+
+
+def create_order(request):
+    basket = Basket.objects.filter(user=request.user)
+    a1 = Order()
+    a1.user = request.user
+    a1.address = '665838 Angarsk 22-2-82'
+    a1.phone = 89148995893
+    a1.save()
+    for i in basket:
+        a2 = OrderItems()
+        a2.order = a1
+        a2.product = i.product
+        a2.quantity = i.quantity
+        a2.save()
+
+    # print(a1.orderitem)
+    basket.delete()
+    order_form = OrderForm()
+
+    return render(request, 'basketapp/create_order.html', {"order_form": order_form})
+
+
+def order_list(request):
+    order = Order.objects.filter(user=request.user)
+
+    title = 'просмотр заказов'
+
+    content = {'title': title, 'order': order}
+
+    return render(request, 'basketapp/order_list.html', content)
+
+
+
+def order_delete(request, pk):
+    order = get_object_or_404(Order, pk=pk)
+
+    # if request.method == 'POST':
+    order.delete()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

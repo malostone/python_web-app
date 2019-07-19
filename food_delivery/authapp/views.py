@@ -39,13 +39,13 @@ def register(request):
     title = 'регистрация'
 
     if request.method == 'POST':
-        register_form = ShopUserRegisterForm(request.POST, request.FILES)
+        register_form = ShopUserRegisterForm(request.POST)
 
         if register_form.is_valid():
             user = register_form.save()
             # if send_verify_mail(user):
             #     print('сообщение подтвердтверждения отправлено')
-            return HttpResponseRedirect(reverse('auth:login'))
+            return HttpResponseRedirect(reverse('main'))
             # else:
             #     print('ошибка отправки сообщения')
             #     return HttpResponseRedirect(reverse('auth:login'))

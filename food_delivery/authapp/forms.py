@@ -21,7 +21,7 @@ class ShopUserLoginForm(AuthenticationForm):
 class ShopUserRegisterForm(UserCreationForm):
     class Meta:
         model = ShopUser
-        fields = ('username', 'first_name', 'password1', 'password2', 'email', 'age')
+        fields = ('username', 'first_name', 'last_name', 'password1', 'password2', 'email', 'age')
 
     def __init__(self, *args, **kwargs):
         super(ShopUserRegisterForm, self).__init__(*args, **kwargs)
@@ -36,15 +36,15 @@ class ShopUserRegisterForm(UserCreationForm):
 
         return data
 
-    def save(self):
-        user = super(ShopUserRegisterForm, self).save()
-
-        user.is_active = False
-        salt = hashlib.sha1(str(random.random()).encode('utf8')).hexdigest()[:6]
-        user.activation_key = hashlib.sha1((user.email + salt).encode('utf8')).hexdigest()
-        user.save()
-
-        return user
+    # def save(self):
+    #     user = super(ShopUserRegisterForm, self).save()
+    #
+    #     user.is_active = True
+    #     # salt = hashlib.sha1(str(random.random()).encode('utf8')).hexdigest()[:6]
+    #     # user.activation_key = hashlib.sha1((user.email + salt).encode('utf8')).hexdigest()
+    #     user.save()
+    #
+    #     return user
 
 class ShopUserEditForm(UserChangeForm):
     class Meta:
