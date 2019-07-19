@@ -35,3 +35,38 @@ class Basket(models.Model):
         return items
 
     items = property(get_items)
+
+
+class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    address = models.TextField(verbose_name='Адрес доставки', max_length=300)
+    phone = models.PositiveIntegerField(verbose_name='Телефон', default=0)
+    is_active = models.BooleanField(verbose_name='активен', default=True)
+
+    def __str__(self):
+        return 'Текущий заказ: {}'.format(self.id)
+
+    def get_total_quantity(self):
+        items = self.orderitems.select_related()
+        return sum(list(map(lambda x: x.quantity, items)))
+
+    def get_product_type_quantity(self):
+        items = self.orderitems.select_related()
+        return len(items)
+
+    def get_total_cost(self):
+        items = self.orderitems.select_related()
+        return sum(list(map(lambda x: x.quantity * x.product.price, items)))
+
+
+class OrderItems(models.Model):
+    order = models.ForeignKey(Order, related_name='orderitems', on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
+
+    def get_product_cost(self):
+        return self.product.price * self.quantity
+
+    @staticmethod
+    def get_item(self, pk):
+        return OrderItem.objects.filter(pk=pk).first()

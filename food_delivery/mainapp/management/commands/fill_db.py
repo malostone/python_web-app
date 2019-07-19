@@ -60,4 +60,4 @@ class Command(BaseCommand):
             new_RC = RestaurantCategory(**RC)
             new_RC.save()
 
-    # super_user = ShopUser.objects.create_superuser('user', 'test@test.ru', 'user', age=18)
+    super_user = ShopUser.objects.create_superuser('user', 'test@test.ru', 'user', age=18)

@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('basket/', include('basketapp.urls', namespace='basket')),
     path('auth/', include('authapp.urls', namespace='auth')),
+    # path('ordersapp/', include('ordersapp.urls', namespace='ordersapp')),
 ]
 
 if settings.DEBUG:

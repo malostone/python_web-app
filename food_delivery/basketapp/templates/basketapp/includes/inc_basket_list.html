@@ -1,23 +1,33 @@
 {% for item in basket_items %}
-<div class="basket_record">
-    <img src="/media/{{ item.product.image }}"
-         alt="{{ item.product.name }}" class="basket_records_img">
+<form method="post" action="{% url 'basket:editt' item.pk %}">
+    {% csrf_token %}
+    <div class="basket_record">
+        <img src="/media/{{ item.product.image }}"
+             alt="{{ item.product.name }}" class="basket_records_img">
 
-    <div class="basket_record_text">
-        <span class="category_name">Категория: {{ item.product.category.name }}</span>
-        <span class="product_name">Наименование: {{ item.product.name }}</span>
-        <span class="product_price">Цена: {{ item.product.price }}&nbspруб</span>
-        <input type="number" name="{{ item.pk }}" style="width: 60px; margin: auto"
-               min="0"
-               value="{{ item.quantity }}">
-        {# <span class="product_cost">Сумма: {{ item.product.price * item.quantity }}&nbspруб</span>#}
+        <div class="basket_record_text">
+            <span class="category_name">Категория: {{ item.product.category.name }}</span>
+            <span class="product_name">Наименование: {{ item.product.name }}</span>
+            <span class="product_price">Цена: {{ item.product.price }}&nbspруб</span>
+            <input type="number" name="{{ item.pk }}" style="width: 60px; margin: auto"
+                   min="0"
+                   value="{{ item.quantity }}">
+            {# <span class="product_cost">Сумма: {{ item.product.price * item.quantity }}&nbspруб</span>#}
 
-        <button class="btn btn-round">
-            <a class="text_button" href="{% url 'basket:remove' item.pk %}" class="">
-                удалить
-            </a>
-        </button>
+            <input type="submit" value="редактировать">
+
+            <!--<button class="btn btn-round">-->
+            <!--<a class="text_button" href="{% url 'basket:editt' item.pk %}" class="">-->
+            <!--редактировать-->
+            <!--</a>-->
+            <!--</button>-->
+            <button class="btn btn-round">
+                <a class="text_button" href="{% url 'basket:remove' item.pk %}" class="">
+                    удалить
+                </a>
+            </button>
+        </div>
+
     </div>
-
-</div>
+</form>
 {% endfor %}
