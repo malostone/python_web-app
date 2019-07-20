@@ -1,38 +1,70 @@
 from django.db import models
+
 from django.conf import settings
-from mainapp.models import Products, ProductCategory, Restaurant
+from mainapp.models import Products
+
 
 class Order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='basket')
-    product = models.ForeignKey(Products, on_delete=models.CASCADE)
-    restauran = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
-    add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
-    price = models.DecimalField(verbose_name='Цена', max_digits=20, decimal_places=2, default=0)
+    FORMING = 'FM'
+    SENT_TO_PROCEED = 'STP'
+    PROCEEDED = 'PRD'
+    PAID = 'PD'
+    READY = 'RDY'
+    CANCEL = 'CNC'
+
+    ORDER_STATUS_CHOICES = (
+        (FORMING, 'формируется'),
+        (SENT_TO_PROCEED, 'отправлен в обработку'),
+        (PAID, 'оплачен'),
+        (PROCEEDED, 'обрабатывается'),
+        (READY, 'готов к выдаче'),
+        (CANCEL, 'отменен'),
+    )
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
+    created = models.DateTimeField(verbose_name='создан', auto_now_add=True)
+    adress=models.TextField(verbose_name='адрес', blank=False)
+    status = models.CharField(verbose_name='статус',
+                              max_length=3,
+                              choices=ORDER_STATUS_CHOICES,
+                              default=FORMING)
+    is_active = models.BooleanField(verbose_name='активен', default=True)
 
     class Meta:
-        ordering = ('-created', )
-        verbose_name = 'Заказ'
-        verbose_name_plural = 'Заказы'
+        ordering = ('-created',)
+        verbose_name = 'заказ'
+        verbose_name_plural = 'заказы'
 
     def __str__(self):
-        return 'Заказ: {}'.format(self.id)
+        return 'Текущий заказ: {}'.format(self.id)
+
+    def get_total_quantity(self):
+        items = self.orderitems.select_related()
+        return sum(list(map(lambda x: x.quantity, items)))
+
+    def get_product_type_quantity(self):
+        items = self.orderitems.select_related()
+        return len(items)
 
     def get_total_cost(self):
-        return sum(item.get_cost() for item in self.items.all())
-    
+        items = self.orderitems.select_related()
+        return sum(list(map(lambda x: x.quantity * x.product.price, items)))
+
+    # переопределяем метод, удаляющий объект
     def delete(self):
         self.is_active = False
         self.save()
 
+
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
-    product = models.ForeignKey(Products, related_name='order_items', on_delete=models.CASCADE)
-    price = models.DecimalField(verbose_name='Цена', max_digits=10, decimal_places=2)
-    quantity = models.PositiveIntegerField(verbose_name='Количество', default=1)
+    order = models.ForeignKey(Order,
+                              related_name="orderitems",
+                              on_delete=models.CASCADE)
+    product = models.ForeignKey(Product,
+                                verbose_name='продукт',
+                                on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(verbose_name='количество',
+                                           default=0)
 
-    def __str__(self):
-        return '{}'.format(self.id)
-
-    def get_cost(self):
-        return self.price * self.quantity
+    def get_product_cost(self):
+        return self.product.price * self.quantity
