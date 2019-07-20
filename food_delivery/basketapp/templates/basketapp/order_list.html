@@ -1,0 +1,49 @@
+{% extends 'basketapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+<div class="">
+    Ваши заказы,
+    {% if user.first_name %}
+    {{ user.first_name|title }}
+    {% else %}
+    Пользователь
+    {% endif %}
+</div>
+<table class="">
+
+    <tbody>
+    {% for item in order %}
+
+    <tr>
+        <td>
+            Заказа номер {{item.pk}}
+        </td>
+
+        <td>
+
+            <a href="{% url 'basket:order_delete' item.pk %}">
+                удалить
+            </a>
+
+        </td>
+        <td>
+
+            <a href="#">
+                оплатить
+            </a>
+
+        </td>
+    </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+<button class="btn btn-default btn-round">
+    <a href="{% url 'main' %}">
+        на главную
+    </a>
+</button>
+
+{% endblock %}
